@@ -68,3 +68,13 @@
     -webkit-animation-iteration-count: 100;
     -webkit-animation-timing-function: ease-in-out;
 }
+
+.confettibox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 90%;
+  max-height: 90%;
+  width: 100%;
+  height: 100%
+}

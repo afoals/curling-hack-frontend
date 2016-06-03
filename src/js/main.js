@@ -8,8 +8,8 @@ var Confetti = {
   colors: ['#FF8E70', '#C76DFC', '#4192F6', '#77DDA8', '#F8E71C'],
   newPiece: function() {
     var n = document.createElement('div');
-    n.style.width = 4+'px';
-    n.style.height = 6+'px';
+    n.style.width = 10+'px';
+    n.style.height = 14+'px';
     n.style.position = 'absolute';
     n.style.left = 0;
     n.style.right = 0;
@@ -20,7 +20,7 @@ var Confetti = {
     return n;
   },
   render: function(event) {
-      var el = event.target;
+      var el = document.getElementsByClassName('confettibox')[0];
       var c = Confetti.newPiece();
       var s = Confetti.size;
       var degs = 0;
@@ -29,13 +29,13 @@ var Confetti = {
       var opacity = 0;
       var count = 0;
       var xfactor;
-      var yfactor = ran(10,40)*(1 + s/10);
+      var yfactor = ran(10,40)*(10);
       if(ran(0,1) === 1) {
-         xfactor = ran(5,40)*(1 + s/10);
+         xfactor = ran(5,40)*(10);
          c.style.left = '-30px';
       }
       else {
-         xfactor = ran(-5,-40)*(1 + s/10);
+         xfactor = ran(-5,-40)*(10);
          c.style.left = '30px';
       }
       var start = null;
@@ -64,26 +64,7 @@ var Confetti = {
       };
       window.requestAnimationFrame(animate);
   },
-  fire: function(event) {
-    if(event.target.classList.length === 1) {
-      event.target.classList.add('checked');
-      var count = 0;
-      var launch = setInterval(function() {
-        if(count < Confetti.amount){
-          Confetti.render(event);
-          count++;
-        }
-        else {
-          clearTimeout(launch);
-        }
-      }, 32);
-      Confetti.active = true;
-    }
-    else {
-      event.target.classList.remove('checked');
-      Confetti.active = false;
-    }
-  },
+  fire: function(event) { epilepsy(event) },
   bindEvents: function() {
     var elements = document.querySelectorAll(this.element);
     for (var i = 0; i < elements.length; i++ ) {
@@ -98,4 +79,37 @@ var Confetti = {
   }
 };
 
+function epilepsy (event) {
+  var count = 0;
+  var launch = setInterval(function() {
+    if(count < Confetti.amount){
+      Confetti.render(event);
+      count++;
+    }
+    else {
+      clearTimeout(launch);
+    }
+  }, 32);
+  Confetti.active = true;
+    // if(event.target.classList.length === 1) {
+    //   event.target.classList.add('checked');
+    //   var count = 0;
+    //   var launch = setInterval(function() {
+    //     if(count < Confetti.amount){
+    //       Confetti.render(event);
+    //       count++;
+    //     }
+    //     else {
+    //       clearTimeout(launch);
+    //     }
+    //   }, 32);
+    //   Confetti.active = true;
+    // }
+    // else {
+    //   event.target.classList.remove('checked');
+    //   Confetti.active = false;
+    // }
+  }
+
 Confetti.init('.checkbox', 20000000, 1);
+epilepsy();
