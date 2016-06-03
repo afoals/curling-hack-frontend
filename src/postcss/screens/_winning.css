@@ -1,0 +1,49 @@
+*{box-sizing: border-box;}
+
+
+.winning {
+  background-color: $primary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+   background-color: $primary;
+  box-shadow: inset 0 0 100px color(black a(20%));
+  color: white;
+  text-align: center;
+  padding: 50px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.task {
+  padding: 30px;
+  width: 100%;
+
+  & + .task {
+    margin-top: 10px;
+  }
+}
+
+.checkbox {
+  position: relative;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 50%;
+  border: 2px solid #E5EEF9;
+  transition: all 0.25s cubic-bezier(0,0,0,1);
+  cursor: pointer;
+
+  &.checked {
+    border: none;
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
