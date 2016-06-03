@@ -1,11 +1,13 @@
 .btn {
   background-color: $pink;
-  padding: 15px 50px;
-  border-radius: 25px;
+  padding: 14px 50px;
+  border-radius: 30px;
   transition: 0.2s;
   cursor: pointer;
+  box-shadow: 0 5px 0 color(black a(10%));
 
   &:hover {
-    background-color: color($pink shade(10%));
+    background-color: color($pink lightness(50%));
+    transform: scale(1.02);
   }
 }
