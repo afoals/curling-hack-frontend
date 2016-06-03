@@ -18,11 +18,12 @@
   font-size: $alpha;
   text-shadow: 2px 2px 0 color(black a(20%));
   line-height: 1.2;
+  margin-bottom: 50px;
 }
 
 .spectate,
 .join {
-  margin: 20px auto 50px;
+  margin: 20px auto;
   display: table;
   text-shadow: 1px 1px 0 color(black a(20%));
 }
