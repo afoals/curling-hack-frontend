@@ -1,13 +1,6 @@
-*{box-sizing: border-box;}
-
-
 .winning {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: white;
+  background-color: $primary;
+  box-shadow: inset 0 0 100px color(black a(20%));
   color: white;
   text-align: center;
   padding: 50px;
@@ -16,21 +9,14 @@
   height: 100%;
 }
 
-.task {
-  padding: 30px;
-  width: 100%;
+.intro {
+  margin-top:80%;
 
-  & + .task {
-    margin-top: 10px;
-  }
 }
 
-
-.demo {
-
-  background-color: red;
+.flash {
   animation-name: stretch;
-  animation-duration: 1.5s;
+  animation-duration: 5s;
   animation-timing-function: ease-out;
   animation-delay: 0;
   animation-direction: alternate;
@@ -47,17 +33,12 @@
     background-color: $pink;
   }
   100% {
-    background-color: $blue-light;
+    background-color: $purple;
   }
 }
 
 .confettibox {
   position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 90%;
-  max-height: 90%;
-  width: 100%;
-  height: 100%
+  right: 50%;
 }
 
