@@ -1,0 +1,17 @@
+.home {
+  background-color: $primary;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.intro {
+  font-size: $alpha;
+  text-shadow: 2px 2px 0 rgba(color(black a(20%));
+  margin-top: 0;
+}
