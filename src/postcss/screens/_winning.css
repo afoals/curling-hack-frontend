@@ -9,9 +9,11 @@
   height: 100%;
 }
 
-.intro {
-  margin-top:80%;
-
+.win {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .flash {
@@ -40,5 +42,6 @@
 .confettibox {
   position: absolute;
   right: 50%;
+  top:50%;
 }
 
