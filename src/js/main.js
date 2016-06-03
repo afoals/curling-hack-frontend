@@ -2,6 +2,17 @@ var ran = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+if (location.pathname === "/game.html") {
+  setInterval(() => {
+    console.log('running');
+    fetch('http://peaceful-crag-91163.herokuapp.com/winners').then(resp => resp.json()).then((data) => {
+      if (data.length === 0) return;
+      const winners = data.map(x => x.userName).join(',');
+      location.href = `${location.origin}/winning.html?all=${winners}`;
+    });
+  }, 1000);
+}
+
 var Confetti = {
   active: false,
   amount: 10,
@@ -112,4 +123,9 @@ function epilepsy (event) {
   }
 
 Confetti.init('.checkbox', 20000000, 1);
-epilepsy();
+
+if (location.pathname.match('/winning.html')) {
+  let winners = location.search.substr(5, location.search.length);
+  document.getElementById('intro').innerText = 'The winners are: ' + winners;
+  epilepsy();
+}
