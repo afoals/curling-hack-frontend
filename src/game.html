@@ -26,10 +26,6 @@
 
 
   <ul class="people">
-    <li class="user">1</li>
-    <li class="user">2</li>
-    <li class="user">3</li>
-    <li class="user">4</li>
   </ul>
 
   <div class="buttons">
@@ -40,6 +36,19 @@
   Cheer
 </button>
 </div>
+
+<script type="text/javascript">
+function poll () {
+  const people = document.getElementsByClassName('people')[0];
+  fetch('http://peaceful-crag-91163.herokuapp.com/users').then(i => i.json()).then(i => {
+    people.innerHTML = '';
+    i.forEach((user, idx) => {
+      people.innerHTML+= `<li class='user'>${user.userName} <span style='color: yellow;'>${user.winner ? '★' : ''}</span></li>`;
+    })
+  })
+}
+window.setInterval(poll, 1000);
+</script>
 
   <script type="text/javascript" defer>
   console.log('element', document.getElementById('bt'))
