@@ -3,6 +3,5 @@ node_modules
 dist
 src/css/**/*.css
 
-src/js/main.js
 
 src/styles.css
