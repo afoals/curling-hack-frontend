@@ -3,7 +3,7 @@
   box-shadow: inset 0 0 100px color(black a(20%));
   color: white;
   text-align: center;
-  padding: 50px;
+  padding: 50px 50px 100px 50px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -18,11 +18,12 @@
   font-size: $alpha;
   text-shadow: 2px 2px 0 color(black a(20%));
   line-height: 1.2;
+  margin-bottom: 50px;
 }
 
-
+.spectate,
 .join {
-  margin: 50px auto;
+  margin: 20px auto;
   display: table;
   text-shadow: 1px 1px 0 color(black a(20%));
 }
