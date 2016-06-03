@@ -14,18 +14,26 @@
     </div>
   </div>
 
-
+<!-- 
   <audio autoplay>
     <source src="img/winner.boo" type="audio/mp3">
   </audio>
+  <script src="js/main.js"></script> -->
 
   <ul class="people">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
   </ul>
 
-  <script src="js/main.js"></script>
+  <script type="text/javascript">
+  function poll () {
+    const people = document.getElementsByClassName('people')[0];
+    fetch('http://peaceful-crag-91163.herokuapp.com/users').then(i => i.json()).then(i => {
+      people.innerHTML = '';
+      i.forEach((user, idx) => {
+        people.innerHTML+= `<li class='user'>${user.userName} <span style='color: yellow;'>${user.winner ? '★' : ''}</span></li>`;
+      })
+    })
+  }
+  window.setInterval(poll, 1000);
+  </script>
 </body>
 </html>
