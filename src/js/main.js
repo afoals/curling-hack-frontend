@@ -113,3 +113,4 @@ function epilepsy (event) {
 
 Confetti.init('.checkbox', 20000000, 1);
 epilepsy();
+

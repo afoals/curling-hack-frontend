@@ -5,27 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>iCEBEACON</title>
   <link rel="stylesheet" href="styles.css">
+
+
 </head>
+
+
+
 <body class="game">
+
 
   <div class="sheet">
     <div class="bullseye">
       <span class="bullseye-bolt"></span>
     </div>
+
+
+
   </div>
 
 
-  <audio autoplay>
-    <source src="img/winner.boo" type="audio/mp3">
-  </audio>
 
   <ul class="people">
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
+    <li class="user">1</li>
+    <li class="user">2</li>
+    <li class="user">3</li>
+    <li class="user">4</li>
   </ul>
 
+  <div class="buttons">
+  <button id="boo" class="btn boo-btn" type="button" style="background-color:; position: relative; z-index:1000; cursor: pointer;"> Boo
+      </button>
+
+      <button id="bt" class="btn" type="button" style="position: relative; z-index:1000; cursor: pointer;">
+  Cheer
+</button>
+</div>
+
+  <script type="text/javascript" defer>
+  console.log('element', document.getElementById('bt'))
+    document.getElementById('bt').addEventListener('click', (e) => {
+      var audioElement = document.createElement('audio');
+      document.getElementsByTagName ('body')[0].appendChild (audioElement)
+      console.log('clicked')
+      audioElement.setAttribute('src', '/img/winner.wav');
+      audioElement.play();
+    });
+  </script>
+
+  <script type="text/javascript" defer>
+  console.log('element', document.getElementById('boo'))
+    document.getElementById('boo').addEventListener('click', (e) => {
+      var audioElement = document.createElement('audio');
+      document.getElementsByTagName ('body')[0].appendChild (audioElement)
+      console.log('clicked')
+      audioElement.setAttribute('src', '/img/boo.mp3');
+      audioElement.play();
+    });
+  </script>
   <script src="js/main.js"></script>
+
 </body>
+
+
 </html>
