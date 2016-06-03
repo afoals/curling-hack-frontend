@@ -9,4 +9,7 @@
 @import "components/buttons";
 
 @import "screens/home";
+
 @import "screens/winning";
+
+@import "screens/game";

@@ -1,7 +1,8 @@
 /* Colours */
 $ink: black;
-$blue: #1773fb;
-$pink: #fc277d;
+$blue: #056fff;
+$blue-light: #cedceb;
+$pink: #ff517b;
 $primary: $blue;
 
 /* Typography */
