@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -44,5 +44,38 @@
   width: 120px;
   height: 120px;
   background: url(../img/bolt.svg) center no-repeat;
+}
 
+.people {
+
+  li {
+    width: 50px;
+    height: 50px;
+    border: 4px solid $blue-dark;
+    display: block;
+    list-style: none;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: $beta;
+    text-shadow: 1px 1px 0 color(black a(20%));
+    padding-top: 5px;
+  }
+
+  li:first-child {
+    background-color: $green;
+  }
+
+  li:nth-child(2) {
+    background-color: $pink;
+  }
+
+  li:nth-child(3) {
+    background-color: $orange;
+  }
+
+  li:nth-child(4) {
+    background-color: $purple;
+  }
 }

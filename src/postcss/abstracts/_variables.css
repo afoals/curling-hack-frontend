@@ -2,7 +2,12 @@
 $ink: black;
 $blue: #056fff;
 $blue-light: #cedceb;
+$blue-dark: #00003c;
 $pink: #ff517b;
+$green: #00d28d;
+$orange: #fbae17;
+$purple: #7823c6;
+
 $primary: $blue;
 
 /* Typography */
